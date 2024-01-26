@@ -25,10 +25,12 @@ EOF
 }
 
 prerequisites() {
+	COWSAY_PATH="search-ms:displayname=Search%20Results%20in%20Home&crumb=location:%3A%3A{F874310E-B6B7-47DC-BC84-B9E6B38F5903}\Cowsay-Win32"
+	FORTUNE_PATH="C:\Program Files (x86)\Fortune"
 	command -v cowsay >/dev/null 2>&1 &&
 	command -v fortune >/dev/null 2>&1 || 
 		{ 
-			echo "Install prerequisites."
+			echo "Install prerequisites (cowsay and fortune) or update path in the scripts."
 			exit 1
 		}
 }
